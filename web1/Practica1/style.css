@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #772424;
+}
+/* Título del encabezado/blog */
+.header {
+    padding: 30px;
+    text-align: center;
+    background: rgb(212, 51, 51);
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+/* Aplicar estilo a la barra de navegación superior */
+.topnav {
+    overflow: hidden;
+    padding-top: auto;
+    margin: auto;
+    background-color: rgb(53, 27, 199);
+}
+
+/* Aplicar estilo a los enlaces de topnav */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 16px 20px 20px;
+    text-decoration: none;
+}
+
+/* Cambiar color al pasar el mouse */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Crea dos columnas desiguales que floten una al lado de la otra*/
+/* Columna izquierda */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Columna derecha */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* Imagen falsa */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Agregar un efecto de tarjeta para artículos */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Limpiar flotadores después de las columnas. */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Pie de página */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Diseño responsivo: cuando la pantalla tiene menos de 800 píxeles de ancho,
+ haga que las dos columnas se apilen una encima de la otra en lugar de una al lado de la otra. */
+@media screen and (max-width: 800px) {
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Diseño responsivo: cuando la pantalla tiene menos de 400 píxeles de ancho,
+ haga que los enlaces de navegación se apilen uno encima del otro en lugar de uno al lado del otro. */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
